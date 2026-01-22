@@ -293,6 +293,6 @@ Having issues or questions?
 
 ### ⭐ Star us on GitHub if you like this project!
 
-**Built with ❤️ using cutting-edge blockchain technology**
+
 
 </div>
