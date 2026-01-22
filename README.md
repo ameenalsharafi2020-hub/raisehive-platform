@@ -5,10 +5,6 @@
 
 A decentralized crowdfunding platform built on Ethereum blockchain that enables creators to raise funds transparently and securely.
 
-![RaiseHive](https://img.shields.io/badge/Blockchain-Ethereum-blue)
-![Smart Contracts](https://img.shields.io/badge/Solidity-0.8.19-green)
-![Frontend](https://img.shields.io/badge/React-18.2-cyan)
-![Backend](https://img.shields.io/badge/Node.js-Express-yellow)
 
 ## ✨ Features
 
