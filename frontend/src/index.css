@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    min-height: 100vh;
+    background-color: white !important;
+    color: #1f2937;
+  }
+
+  #root {
+    min-height: 100vh;
+    background-color: white !important;
+  }
+}
+
+/* Thirdweb Button Visibility Fix */
+button[data-test="connect-wallet-button"],
+.tw-connect-wallet,
+[class*="ConnectWallet"] {
+  display: inline-flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Thirdweb Modal Fix - Prevent Quick Close */
+[data-headlessui-state="open"],
+div[role="dialog"],
+.walletconnect-modal__mobile__toggle,
+.walletconnect-qrcode__base {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* WalletConnect Modal Stay Open */
+.walletconnect-modal__base {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+.walletconnect-qrcode__base {
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Prevent Modal Auto-Close */
+[data-state="open"] {
+  pointer-events: auto !important;
+}
+
+/* Fix for Thirdweb/WalletConnect modals */
+div[class*="Modal"],
+div[class*="walletconnect"] {
+  z-index: 99999 !important;
+}
+
+/* Ensure QR Code is visible and stays */
+canvas,
+canvas[id*="walletconnect-qrcode-modal"] {
+  min-width: 300px !important;
+  min-height: 300px !important;
+  margin: 20px auto !important;
+  display: block !important;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
